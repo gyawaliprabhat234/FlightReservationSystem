@@ -13,8 +13,8 @@ public class Airport {
 	private Address address;
 
 	public Airport(String code, String name, Address address) {
-		this.id = "";
-		this.code = code;
+		this.id = UUID.randomUUID().toString();
+		this.code = code.toUpperCase();
 		this.name = name;
 		this.address = address;
 	}

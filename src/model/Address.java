@@ -1,6 +1,6 @@
 package model;
 
-import java.util.Locale;
+import java.util.UUID;
 
 
 public class Address {
@@ -15,8 +15,14 @@ public class Address {
 	
 	private String zip;
 
-	public Address() {
-		this.id = "";
+	
+	public Address(String street, String city, String state, String zip) {
+		super();
+		this.id = UUID.randomUUID().toString();
+		this.street = street;
+		this.city = city;
+		this.state = state;
+		this.zip = zip;
 	}
 
 	public String getId() {
